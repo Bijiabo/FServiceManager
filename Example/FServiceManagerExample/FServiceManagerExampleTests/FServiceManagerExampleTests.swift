@@ -65,6 +65,44 @@ class FServiceManagerExampleTests: XCTestCase {
         }
     }
     
+    // MARK: - check login state
+    
+    func testCheckLogin() {
+        let expectation = expectationWithDescription("test check login")
+        var isLogin: Bool = false
+        
+        FAction.login("admin@admin.com", password: "password") { (success, description) -> Void in
+            if success {
+                FAction.checkLogin { (success, description) -> Void in
+                    isLogin = success
+                    expectation.fulfill()
+                }
+            }
+        }
+        
+        waitForExpectationsWithTimeout(10) { (error) -> Void in
+            XCTAssertNil(error)
+            XCTAssert(isLogin)
+        }
+    }
+    
+    // MARK: - Flux module
+    
+    func testGetFluxesList() {
+        let expectation = expectationWithDescription("test check login")
+        var list: JSON = JSON(Array<JSON>())
+        
+        FAction.fluxes.list { (request, response, json, error) -> Void in
+            list = json
+            expectation.fulfill()
+        }
+        
+        waitForExpectationsWithTimeout(10) { (error) -> Void in
+            XCTAssert(list.count>0)
+        }
+    }
+    
+    // MARK: - tool func
     func getCurrentShortDate() -> String {
         let todaysDate = NSDate()
         let dateFormatter = NSDateFormatter()

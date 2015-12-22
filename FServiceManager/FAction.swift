@@ -166,6 +166,14 @@ public class FAction: NSObject {
             )
         }
         
+        // get list
+        public class func list(var page page: Int = 0, completeHandler: (request: NSURLRequest, response:  NSHTTPURLResponse?, json: JSON, error: ErrorType?)->Void) {
+            if page < 0 { page=0 }
+            FNetManager.sharedInstance.GET(path: "fluxes.json?page=\(page)") { (request, response, json, error) -> Void in
+                completeHandler(request: request, response: response, json: json, error: error)
+            }
+        }
+        
         // destroy
         public class func destroy(id id: String, completeHandler: (success: Bool, description: String)->Void = {(success: Bool, description: String) in }) {
             FNetManager.sharedInstance.DELETE(path: "fluxes/\(id).json", parameters: ["token": FHelper.token]) { (request, response, json, error) -> Void in
