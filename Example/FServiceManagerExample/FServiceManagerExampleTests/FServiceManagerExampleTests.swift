@@ -108,7 +108,7 @@ class FServiceManagerExampleTests: XCTestCase {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "dd_MM_yyyy_ss_hh_mm"
         let DateInFormat = dateFormatter.stringFromDate(todaysDate)
-        print(DateInFormat)
+        
         return DateInFormat
     }
     
