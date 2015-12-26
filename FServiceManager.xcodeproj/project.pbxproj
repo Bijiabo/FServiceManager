@@ -13,6 +13,8 @@
 		65C4B5FE1C29543900843C5C /* FNetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C4B5FD1C29543900843C5C /* FNetManager.swift */; };
 		65C4B6021C2954B400843C5C /* Alamofire-SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C4B6011C2954B400843C5C /* Alamofire-SwiftyJSON.swift */; };
 		65CE59621C29868F008809B0 /* FConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CE59611C29868F008809B0 /* FConfiguration.swift */; };
+		65DAC8351C2E5ADD00335EFC /* FStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DAC8341C2E5ADD00335EFC /* FStatus.swift */; };
+		65DAC8381C2E5B6300335EFC /* FStatusProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DAC8371C2E5B6300335EFC /* FStatusProtocols.swift */; };
 		65E3C93E1C296AFB00A5E448 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E3C93D1C296AFB00A5E448 /* SwiftyJSON.swift */; };
 		65E3C9591C296B5A00A5E448 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E3C94A1C296B4900A5E448 /* Alamofire.framework */; };
 		65E3C95C1C297A4000A5E448 /* FAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E3C95B1C297A4000A5E448 /* FAction.swift */; };
@@ -121,6 +123,8 @@
 		65C4B5FD1C29543900843C5C /* FNetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNetManager.swift; sourceTree = "<group>"; };
 		65C4B6011C2954B400843C5C /* Alamofire-SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire-SwiftyJSON.swift"; sourceTree = "<group>"; };
 		65CE59611C29868F008809B0 /* FConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FConfiguration.swift; path = ../FConfiguration.swift; sourceTree = "<group>"; };
+		65DAC8341C2E5ADD00335EFC /* FStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FStatus.swift; sourceTree = "<group>"; };
+		65DAC8371C2E5B6300335EFC /* FStatusProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FStatusProtocols.swift; sourceTree = "<group>"; };
 		65E3C93D1C296AFB00A5E448 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		65E3C93F1C296B4900A5E448 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		65E3C95B1C297A4000A5E448 /* FAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAction.swift; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 		657380221C29506200B3524F /* FServiceManager */ = {
 			isa = PBXGroup;
 			children = (
+				65DAC8361C2E5B4900335EFC /* Protocols */,
 				65E3C9771C2980CB00A5E448 /* Support */,
 				65E3C9741C29808100A5E448 /* 3rd Projects */,
 				65E3C9731C29806400A5E448 /* lib */,
@@ -184,6 +189,7 @@
 				65E3C95D1C297A9700A5E448 /* FHelper.swift */,
 				65E3C95F1C297AB400A5E448 /* FTool.swift */,
 				65E3C9711C29805A00A5E448 /* FConstant.swift */,
+				65DAC8341C2E5ADD00335EFC /* FStatus.swift */,
 			);
 			path = FServiceManager;
 			sourceTree = "<group>";
@@ -195,6 +201,14 @@
 				657380311C29506300B3524F /* Info.plist */,
 			);
 			path = FServiceManagerTests;
+			sourceTree = "<group>";
+		};
+		65DAC8361C2E5B4900335EFC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				65DAC8371C2E5B6300335EFC /* FStatusProtocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		65E3C9401C296B4900A5E448 /* Products */ = {
@@ -447,8 +461,10 @@
 				65E3C9721C29805A00A5E448 /* FConstant.swift in Sources */,
 				65CE59621C29868F008809B0 /* FConfiguration.swift in Sources */,
 				65E3C9601C297AB400A5E448 /* FTool.swift in Sources */,
+				65DAC8351C2E5ADD00335EFC /* FStatus.swift in Sources */,
 				65E3C95E1C297A9700A5E448 /* FHelper.swift in Sources */,
 				65C4B6021C2954B400843C5C /* Alamofire-SwiftyJSON.swift in Sources */,
+				65DAC8381C2E5B6300335EFC /* FStatusProtocols.swift in Sources */,
 				65E3C9761C2980B100A5E448 /* DeviceGuru.swift in Sources */,
 				65C4B5FE1C29543900843C5C /* FNetManager.swift in Sources */,
 				65E3C9701C29802E00A5E448 /* User.swift in Sources */,
