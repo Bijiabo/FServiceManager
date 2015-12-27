@@ -102,6 +102,31 @@ class FServiceManagerExampleTests: XCTestCase {
         }
     }
     
+    // MARK: - Cat 
+    
+    func testGetMineCat() {
+        let expectation = expectationWithDescription("test log in success")
+        
+        var cats: JSON = JSON([])
+        
+        FAction.login("admin@admin.com", password: "password") { (success, description) -> Void in
+            FAction.cats.mine({ (request, response, json, error) -> Void in
+                cats = json
+                expectation.fulfill()
+            })
+        }
+        
+        waitForExpectationsWithTimeout(10) { (error) -> Void in
+            print(cats)
+            XCTAssert(cats.count>0)
+        }
+    }
+    
+    
+}
+
+
+extension FServiceManagerExampleTests {
     // MARK: - tool func
     func getCurrentShortDate() -> String {
         let todaysDate = NSDate()
@@ -111,5 +136,4 @@ class FServiceManagerExampleTests: XCTestCase {
         
         return DateInFormat
     }
-    
 }
