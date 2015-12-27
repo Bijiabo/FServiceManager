@@ -13,27 +13,27 @@ public struct FHelper {
     // MARK:
     // MARK: - token
     
-    static var token: String {
+    public static var token: String {
         return FTool.keychain.token()
     }
     
-    static var tokenID: String {
+    public static var tokenID: String {
         return FTool.keychain.tokenID()
     }
     
-    static func setToken (id id: String, token: String) {
+    public static func setToken (id id: String, token: String) {
         FTool.keychain.defaultKeychain()["token"] = token
         FTool.keychain.defaultKeychain()["tokenID"] = id
     }
     
-    static func clearToken () {
+    public static func clearToken () {
         FTool.keychain.defaultKeychain()["token"] = nil
         FTool.keychain.defaultKeychain()["tokenID"] = nil
     }
     
     // MARK:
     // MARK: - user information
-    static var current_user: User {
+    public static var current_user: User {
         set (newValue) {
         let userDefaults = NSUserDefaults.standardUserDefaults()
         userDefaults.setObject(newValue.name, forKey: "name")
@@ -57,11 +57,11 @@ public struct FHelper {
     // MARK:
     // MARK: - user functions
     
-    static var logged_in: Bool {
+    public static var logged_in: Bool {
         return NSUserDefaults.standardUserDefaults().boolForKey(FConstant.UserDefaults.FStatus.logged_in)
     }
     
-    static func current_user (user_id: Int) -> Bool {
+    public static func current_user (user_id: Int) -> Bool {
         return current_user.id == user_id && current_user.valid && logged_in
     }
 }
