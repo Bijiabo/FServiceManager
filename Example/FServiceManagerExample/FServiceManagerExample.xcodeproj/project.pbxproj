@@ -15,6 +15,9 @@
 		656E3F231C29838200655AAF /* FServiceManagerExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656E3F221C29838200655AAF /* FServiceManagerExampleTests.swift */; };
 		656E3F3A1C2983A400655AAF /* FServiceManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 656E3F351C29838E00655AAF /* FServiceManager.framework */; };
 		656E3F3B1C2983E200655AAF /* FServiceManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 656E3F351C29838E00655AAF /* FServiceManager.framework */; };
+		65D54D1C1C30448100F7B450 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D54D1B1C30448100F7B450 /* SwiftyJSON.framework */; };
+		65D54D1D1C30448100F7B450 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65D54D1B1C30448100F7B450 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		65D54D201C3044F000F7B450 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D54D1B1C30448100F7B450 /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		65D54D1F1C30448100F7B450 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				65D54D1D1C30448100F7B450 /* SwiftyJSON.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		656E3F0A1C29838200655AAF /* FServiceManagerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FServiceManagerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		656E3F0D1C29838200655AAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +77,7 @@
 		656E3F221C29838200655AAF /* FServiceManagerExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FServiceManagerExampleTests.swift; sourceTree = "<group>"; };
 		656E3F241C29838200655AAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		656E3F2D1C29838E00655AAF /* FServiceManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FServiceManager.xcodeproj; path = ../../FServiceManager.xcodeproj; sourceTree = "<group>"; };
+		65D54D1B1C30448100F7B450 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = ../../Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65D54D1C1C30448100F7B450 /* SwiftyJSON.framework in Frameworks */,
 				656E3F3A1C2983A400655AAF /* FServiceManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65D54D201C3044F000F7B450 /* SwiftyJSON.framework in Frameworks */,
 				656E3F3B1C2983E200655AAF /* FServiceManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +105,7 @@
 		656E3F011C29838200655AAF = {
 			isa = PBXGroup;
 			children = (
+				65D54D1B1C30448100F7B450 /* SwiftyJSON.framework */,
 				656E3F2D1C29838E00655AAF /* FServiceManager.xcodeproj */,
 				656E3F0C1C29838200655AAF /* FServiceManagerExample */,
 				656E3F211C29838200655AAF /* FServiceManagerExampleTests */,
@@ -127,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				656E3F351C29838E00655AAF /* FServiceManager.framework */,
-				656E3F371C29838E00655AAF /* FServiceManager.xctest */,
+				656E3F371C29838E00655AAF /* FServiceManager.temp_caseinsensitive_rename.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +163,8 @@
 				656E3F061C29838200655AAF /* Sources */,
 				656E3F071C29838200655AAF /* Frameworks */,
 				656E3F081C29838200655AAF /* Resources */,
+				65D54D1F1C30448100F7B450 /* Embed Frameworks */,
+				65D54D211C30452900F7B450 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -223,10 +246,10 @@
 			remoteRef = 656E3F341C29838E00655AAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		656E3F371C29838E00655AAF /* FServiceManager.xctest */ = {
+		656E3F371C29838E00655AAF /* FServiceManager.temp_caseinsensitive_rename.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = FServiceManager.xctest;
+			path = FServiceManager.temp_caseinsensitive_rename.xctest;
 			remoteRef = 656E3F361C29838E00655AAF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -251,6 +274,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65D54D211C30452900F7B450 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		656E3F061C29838200655AAF /* Sources */ = {

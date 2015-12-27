@@ -9,6 +9,7 @@
 import XCTest
 @testable import FServiceManagerExample
 import FServiceManager
+import SwiftyJSON
 
 class FServiceManagerExampleTests: XCTestCase {
     
@@ -119,6 +120,23 @@ class FServiceManagerExampleTests: XCTestCase {
         waitForExpectationsWithTimeout(10) { (error) -> Void in
             print(cats)
             XCTAssert(cats.count>0)
+        }
+    }
+    
+    func testCreateCat() {
+        let expectation = expectationWithDescription("test log in success")
+        
+        var successResult: Bool = false
+        
+        FAction.login("admin@admin.com", password: "password") { (success, description) -> Void in
+            FAction.cats.create("cat_xxx", age: 1, breed: "china cat", completeHandler: { (success, description) -> Void in
+                successResult = success
+                expectation.fulfill()
+            })
+        }
+        
+        waitForExpectationsWithTimeout(10) { (error) -> Void in
+            XCTAssert(successResult)
         }
     }
     

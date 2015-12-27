@@ -202,54 +202,32 @@ public class FAction: NSObject {
             }
         }
         
-        /*
-        // create
-        public class func create(name name: String, age: String, breed: String, image: NSData?, completeHandler: (success: Bool, description: String)->Void) {
-            FNetManager.sharedInstance.UPLOAD(path: "fluxes.json?token=\(FHelper.token)",
-                multipartFormData: { (multipartFormData) -> Void in
-                    if let imageData = image {
-                        multipartFormData.appendBodyPart(data: imageData, name: "flux[picture]", fileName: "xxx.jpg", mimeType: "image/jpeg")
-                    }else{
-                        multipartFormData.appendBodyPart(data: "".dataUsingEncoding(NSUTF8StringEncoding)!, name: "flux[picture]")
-                    }
-                    //multipartFormData.appendBodyPart(fileURL: uploadImageURL, name: "flux[picture]")
-                    multipartFormData.appendBodyPart(data: name.dataUsingEncoding(NSUTF8StringEncoding)!, name: "flux[motion]")
-                    multipartFormData.appendBodyPart(data: age.dataUsingEncoding(NSUTF8StringEncoding)!, name: "flux[motion]")
-                    multipartFormData.appendBodyPart(data: breed.dataUsingEncoding(NSUTF8StringEncoding)!, name: "flux[content]")
-                },
-                completionHandler: { (request, response, json, error) -> Void in
-                    completeHandler(success: json["success"].boolValue, description: json["description"].stringValue)
-                },
-                failedHandler: {(success: Bool, description: String) in
-                    completeHandler(success: success, description: description)
-                }
-            )
-        }
-        
-        // get list
-        public class func list(var page page: Int = 0, completeHandler: (request: NSURLRequest, response:  NSHTTPURLResponse?, json: JSON, error: ErrorType?)->Void) {
-            if page < 0 { page=0 }
-            FNetManager.sharedInstance.GET(path: "cats.json?page=\(page)") { (request, response, json, error) -> Void in
-                completeHandler(request: request, response: response, json: json, error: error)
-            }
-        }
-        
-        // destroy
-        public class func destroy(id id: String, completeHandler: (success: Bool, description: String)->Void = {(success: Bool, description: String) in }) {
-            FNetManager.sharedInstance.DELETE(path: "cats/\(id).json", parameters: ["token": FHelper.token]) { (request, response, json, error) -> Void in
+        public class func create (name: String, age: Int, breed: String, completeHandler: (success: Bool, description: String)->Void ) {
+            let parameters: [String : AnyObject] = [
+                "cat": [
+                    "name": name,
+                    "age": age,
+                    "breed": breed,
+                    "user_id": FHelper.current_user.id
+                ],
+                "token": FHelper.token
+            ]
+            
+            FNetManager.sharedInstance.POST(path: "cat.json", parameters: parameters) { (request, response, json, error) -> Void in
                 var success: Bool = false
-                var description: String = String()
+                var description: String = error.debugDescription
                 
                 if error == nil {
                     success = !json["error"].boolValue
-                    description = json["description"].stringValue
-                    completeHandler(success: success, description: description)
-                } else {
-                    description = error.debugDescription
-                    completeHandler(success: success, description: description)
+                    if !success {
+                        description = json["description"].stringValue
+                    }
                 }
+                
+                completeHandler(success: success, description: description)
             }
         }
-        */
+
+        
     }
 }
