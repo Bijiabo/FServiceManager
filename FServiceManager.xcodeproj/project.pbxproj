@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		657380241C29506200B3524F /* FNetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 657380231C29506200B3524F /* FNetManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		657380301C29506300B3524F /* FNetManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6573802F1C29506300B3524F /* FNetManagerTests.swift */; };
-		65C18DC91C298316008C19AF /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E3C9681C297CE500A5E448 /* KeychainAccess.framework */; };
 		65C4B5FE1C29543900843C5C /* FNetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C4B5FD1C29543900843C5C /* FNetManager.swift */; };
 		65C4B6021C2954B400843C5C /* Alamofire-SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C4B6011C2954B400843C5C /* Alamofire-SwiftyJSON.swift */; };
 		65CE59621C29868F008809B0 /* FConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CE59611C29868F008809B0 /* FConfiguration.swift */; };
+		65D54D131C30328A00F7B450 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D54D101C30328A00F7B450 /* Alamofire.framework */; };
+		65D54D141C30328A00F7B450 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D54D111C30328A00F7B450 /* KeychainAccess.framework */; };
+		65D54D151C30328A00F7B450 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D54D121C30328A00F7B450 /* SwiftyJSON.framework */; };
 		65DAC8351C2E5ADD00335EFC /* FStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DAC8341C2E5ADD00335EFC /* FStatus.swift */; };
 		65DAC8381C2E5B6300335EFC /* FStatusProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DAC8371C2E5B6300335EFC /* FStatusProtocols.swift */; };
-		65E3C93E1C296AFB00A5E448 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E3C93D1C296AFB00A5E448 /* SwiftyJSON.swift */; };
-		65E3C9591C296B5A00A5E448 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E3C94A1C296B4900A5E448 /* Alamofire.framework */; };
 		65E3C95C1C297A4000A5E448 /* FAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E3C95B1C297A4000A5E448 /* FAction.swift */; };
 		65E3C95E1C297A9700A5E448 /* FHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E3C95D1C297A9700A5E448 /* FHelper.swift */; };
 		65E3C9601C297AB400A5E448 /* FTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E3C95F1C297AB400A5E448 /* FTool.swift */; };
@@ -34,83 +34,6 @@
 			remoteGlobalIDString = 6573801F1C29506200B3524F;
 			remoteInfo = FNetManager;
 		};
-		65E3C9491C296B4900A5E448 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 65E3C93F1C296B4900A5E448 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
-		65E3C94B1C296B4900A5E448 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 65E3C93F1C296B4900A5E448 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS Tests";
-		};
-		65E3C94D1C296B4900A5E448 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 65E3C93F1C296B4900A5E448 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
-			remoteInfo = "Alamofire OSX";
-		};
-		65E3C94F1C296B4900A5E448 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 65E3C93F1C296B4900A5E448 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
-			remoteInfo = "Alamofire OSX Tests";
-		};
-		65E3C9511C296B4900A5E448 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 65E3C93F1C296B4900A5E448 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
-			remoteInfo = "Alamofire tvOS";
-		};
-		65E3C9531C296B4900A5E448 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 65E3C93F1C296B4900A5E448 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
-			remoteInfo = "Alamofire tvOS Tests";
-		};
-		65E3C9551C296B4900A5E448 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 65E3C93F1C296B4900A5E448 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E4202FE01B667AA100C997FB;
-			remoteInfo = "Alamofire watchOS";
-		};
-		65E3C9571C296B5300A5E448 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 65E3C93F1C296B4900A5E448 /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
-		65E3C9671C297CE500A5E448 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 65E3C9621C297CE500A5E448 /* KeychainAccess.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 140F195C1A49D79400B0016A;
-			remoteInfo = KeychainAccess;
-		};
-		65E3C9691C297CE500A5E448 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 65E3C9621C297CE500A5E448 /* KeychainAccess.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 140F19671A49D79500B0016A;
-			remoteInfo = KeychainAccessTests;
-		};
-		65E3C96B1C297EC100A5E448 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 65E3C9621C297CE500A5E448 /* KeychainAccess.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 140F195B1A49D79400B0016A;
-			remoteInfo = KeychainAccess;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -123,14 +46,14 @@
 		65C4B5FD1C29543900843C5C /* FNetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNetManager.swift; sourceTree = "<group>"; };
 		65C4B6011C2954B400843C5C /* Alamofire-SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire-SwiftyJSON.swift"; sourceTree = "<group>"; };
 		65CE59611C29868F008809B0 /* FConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FConfiguration.swift; path = ../FConfiguration.swift; sourceTree = "<group>"; };
+		65D54D101C30328A00F7B450 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		65D54D111C30328A00F7B450 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		65D54D121C30328A00F7B450 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		65DAC8341C2E5ADD00335EFC /* FStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FStatus.swift; sourceTree = "<group>"; };
 		65DAC8371C2E5B6300335EFC /* FStatusProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FStatusProtocols.swift; sourceTree = "<group>"; };
-		65E3C93D1C296AFB00A5E448 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		65E3C93F1C296B4900A5E448 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		65E3C95B1C297A4000A5E448 /* FAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAction.swift; sourceTree = "<group>"; };
 		65E3C95D1C297A9700A5E448 /* FHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHelper.swift; sourceTree = "<group>"; };
 		65E3C95F1C297AB400A5E448 /* FTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTool.swift; sourceTree = "<group>"; };
-		65E3C9621C297CE500A5E448 /* KeychainAccess.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeychainAccess.xcodeproj; path = KeychainAccess/Lib/KeychainAccess.xcodeproj; sourceTree = "<group>"; };
 		65E3C96F1C29802E00A5E448 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		65E3C9711C29805A00A5E448 /* FConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FConstant.swift; sourceTree = "<group>"; };
 		65E3C9751C2980B100A5E448 /* DeviceGuru.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceGuru.swift; sourceTree = "<group>"; };
@@ -141,8 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65C18DC91C298316008C19AF /* KeychainAccess.framework in Frameworks */,
-				65E3C9591C296B5A00A5E448 /* Alamofire.framework in Frameworks */,
+				65D54D131C30328A00F7B450 /* Alamofire.framework in Frameworks */,
+				65D54D141C30328A00F7B450 /* KeychainAccess.framework in Frameworks */,
+				65D54D151C30328A00F7B450 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +84,7 @@
 		657380161C29506200B3524F = {
 			isa = PBXGroup;
 			children = (
+				65D54D161C30329200F7B450 /* Frameworks */,
 				657380221C29506200B3524F /* FServiceManager */,
 				6573802E1C29506300B3524F /* FServiceManagerTests */,
 				657380211C29506200B3524F /* Products */,
@@ -180,7 +105,6 @@
 			children = (
 				65DAC8361C2E5B4900335EFC /* Protocols */,
 				65E3C9771C2980CB00A5E448 /* Support */,
-				65E3C9741C29808100A5E448 /* 3rd Projects */,
 				65E3C9731C29806400A5E448 /* lib */,
 				65E3C96E1C29801500A5E448 /* Models */,
 				65C4B5FD1C29543900843C5C /* FNetManager.swift */,
@@ -203,35 +127,22 @@
 			path = FServiceManagerTests;
 			sourceTree = "<group>";
 		};
+		65D54D161C30329200F7B450 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65D54D101C30328A00F7B450 /* Alamofire.framework */,
+				65D54D111C30328A00F7B450 /* KeychainAccess.framework */,
+				65D54D121C30328A00F7B450 /* SwiftyJSON.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		65DAC8361C2E5B4900335EFC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				65DAC8371C2E5B6300335EFC /* FStatusProtocols.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		65E3C9401C296B4900A5E448 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				65E3C94A1C296B4900A5E448 /* Alamofire.framework */,
-				65E3C94C1C296B4900A5E448 /* Alamofire iOS Tests.xctest */,
-				65E3C94E1C296B4900A5E448 /* Alamofire.framework */,
-				65E3C9501C296B4900A5E448 /* Alamofire OSX Tests.xctest */,
-				65E3C9521C296B4900A5E448 /* Alamofire.framework */,
-				65E3C9541C296B4900A5E448 /* Alamofire tvOS Tests.xctest */,
-				65E3C9561C296B4900A5E448 /* Alamofire.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		65E3C9631C297CE500A5E448 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				65E3C9681C297CE500A5E448 /* KeychainAccess.framework */,
-				65E3C96A1C297CE500A5E448 /* KeychainAccessTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		65E3C96E1C29801500A5E448 /* Models */ = {
@@ -245,20 +156,10 @@
 		65E3C9731C29806400A5E448 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				65E3C93D1C296AFB00A5E448 /* SwiftyJSON.swift */,
 				65C4B6011C2954B400843C5C /* Alamofire-SwiftyJSON.swift */,
 				65E3C9751C2980B100A5E448 /* DeviceGuru.swift */,
 			);
 			name = lib;
-			sourceTree = "<group>";
-		};
-		65E3C9741C29808100A5E448 /* 3rd Projects */ = {
-			isa = PBXGroup;
-			children = (
-				65E3C9621C297CE500A5E448 /* KeychainAccess.xcodeproj */,
-				65E3C93F1C296B4900A5E448 /* Alamofire.xcodeproj */,
-			);
-			name = "3rd Projects";
 			sourceTree = "<group>";
 		};
 		65E3C9771C2980CB00A5E448 /* Support */ = {
@@ -292,12 +193,11 @@
 				6573801C1C29506200B3524F /* Frameworks */,
 				6573801D1C29506200B3524F /* Headers */,
 				6573801E1C29506200B3524F /* Resources */,
+				65D54D171C3032AB00F7B450 /* Run Script for Carthage */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				65E3C96C1C297EC100A5E448 /* PBXTargetDependency */,
-				65E3C9581C296B5300A5E448 /* PBXTargetDependency */,
 			);
 			name = FServiceManager;
 			productName = FNetManager;
@@ -350,16 +250,6 @@
 			mainGroup = 657380161C29506200B3524F;
 			productRefGroup = 657380211C29506200B3524F /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 65E3C9401C296B4900A5E448 /* Products */;
-					ProjectRef = 65E3C93F1C296B4900A5E448 /* Alamofire.xcodeproj */;
-				},
-				{
-					ProductGroup = 65E3C9631C297CE500A5E448 /* Products */;
-					ProjectRef = 65E3C9621C297CE500A5E448 /* KeychainAccess.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				6573801F1C29506200B3524F /* FServiceManager */,
@@ -367,72 +257,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		65E3C94A1C296B4900A5E448 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 65E3C9491C296B4900A5E448 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		65E3C94C1C296B4900A5E448 /* Alamofire iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire iOS Tests.xctest";
-			remoteRef = 65E3C94B1C296B4900A5E448 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		65E3C94E1C296B4900A5E448 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 65E3C94D1C296B4900A5E448 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		65E3C9501C296B4900A5E448 /* Alamofire OSX Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire OSX Tests.xctest";
-			remoteRef = 65E3C94F1C296B4900A5E448 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		65E3C9521C296B4900A5E448 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 65E3C9511C296B4900A5E448 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		65E3C9541C296B4900A5E448 /* Alamofire tvOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire tvOS Tests.xctest";
-			remoteRef = 65E3C9531C296B4900A5E448 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		65E3C9561C296B4900A5E448 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 65E3C9551C296B4900A5E448 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		65E3C9681C297CE500A5E448 /* KeychainAccess.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = KeychainAccess.framework;
-			remoteRef = 65E3C9671C297CE500A5E448 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		65E3C96A1C297CE500A5E448 /* KeychainAccessTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = KeychainAccessTests.xctest;
-			remoteRef = 65E3C9691C297CE500A5E448 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6573801E1C29506200B3524F /* Resources */ = {
@@ -451,13 +275,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		65D54D171C3032AB00F7B450 /* Run Script for Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			name = "Run Script for Carthage";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6573801B1C29506200B3524F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				65E3C95C1C297A4000A5E448 /* FAction.swift in Sources */,
-				65E3C93E1C296AFB00A5E448 /* SwiftyJSON.swift in Sources */,
 				65E3C9721C29805A00A5E448 /* FConstant.swift in Sources */,
 				65CE59621C29868F008809B0 /* FConfiguration.swift in Sources */,
 				65E3C9601C297AB400A5E448 /* FTool.swift in Sources */,
@@ -486,16 +329,6 @@
 			isa = PBXTargetDependency;
 			target = 6573801F1C29506200B3524F /* FServiceManager */;
 			targetProxy = 6573802C1C29506300B3524F /* PBXContainerItemProxy */;
-		};
-		65E3C9581C296B5300A5E448 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire iOS";
-			targetProxy = 65E3C9571C296B5300A5E448 /* PBXContainerItemProxy */;
-		};
-		65E3C96C1C297EC100A5E448 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KeychainAccess;
-			targetProxy = 65E3C96B1C297EC100A5E448 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -602,6 +435,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FServiceManager",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/FServiceManager/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -627,6 +461,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FServiceManager",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/FServiceManager/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

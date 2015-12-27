@@ -7,8 +7,9 @@
 //
 
 import Foundation
-import Alamofire
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 public class FAction: NSObject {
     subscript(request: String) -> AnyObject? {

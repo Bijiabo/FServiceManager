@@ -7,8 +7,9 @@
 //
 
 import Foundation
-import KeychainAccess
 import UIKit
+import KeychainAccess
+import SwiftyJSON
 
 public class FTool {
     
