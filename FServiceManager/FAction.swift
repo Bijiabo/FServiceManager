@@ -195,6 +195,7 @@ public class FAction: NSObject {
     
     // MARK: - cats
     public class cats {
+        // get users own cats
         public class func mine (completeHandler: (request: NSURLRequest, response:  NSHTTPURLResponse?, json: JSON, error: ErrorType?)->Void) {
             
             FNetManager.sharedInstance.GET(path: "users/\(FHelper.current_user.id)/cats.json") { (request, response, json, error) -> Void in
@@ -202,6 +203,7 @@ public class FAction: NSObject {
             }
         }
         
+        // create
         public class func create (name: String, age: Int, breed: String, completeHandler: (success: Bool, description: String)->Void ) {
             let parameters: [String : AnyObject] = [
                 "cat": [
@@ -213,7 +215,7 @@ public class FAction: NSObject {
                 "token": FHelper.token
             ]
             
-            FNetManager.sharedInstance.POST(path: "cat.json", parameters: parameters) { (request, response, json, error) -> Void in
+            FNetManager.sharedInstance.POST(path: "cats.json", parameters: parameters) { (request, response, json, error) -> Void in
                 var success: Bool = false
                 var description: String = error.debugDescription
                 
@@ -227,7 +229,8 @@ public class FAction: NSObject {
                 completeHandler(success: success, description: description)
             }
         }
-
+        
+        
         
     }
 }
