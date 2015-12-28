@@ -9,12 +9,12 @@
 import Foundation
 
 public class User {
-    let id: Int
-    var name: String
-    var email: String
-    var valid: Bool
+    public let id: Int
+    public var name: String
+    public var email: String
+    public var valid: Bool
     
-    init (id: Int, name: String, email: String, valid: Bool = true) {
+    public init (id: Int, name: String, email: String, valid: Bool = true) {
         
         self.id = id
         self.name = name
