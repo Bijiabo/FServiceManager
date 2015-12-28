@@ -71,4 +71,13 @@ public class FNetManager {
         )
     }
     
+    public func PATCH (path path: String, parameters: [String : AnyObject]? = nil, host: String = FConfiguration.sharedInstance.host, encoding: ParameterEncoding = ParameterEncoding.JSON , completionHandler: (request: NSURLRequest, response: NSHTTPURLResponse?, json: JSON, error:ErrorType?) -> Void)
+    {
+        Alamofire
+            .request(.PATCH, "\(host)\(path)", parameters: parameters, encoding: ParameterEncoding.JSON)
+            .responseSwiftyJSON({ (request, response, json, error) in
+                completionHandler(request: request, response: response, json: json, error: error)
+            })
+    }
+    
 }
