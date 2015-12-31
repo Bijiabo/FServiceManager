@@ -128,7 +128,7 @@ public class FStatus: NSObject {
         FAction.checkLogin { (success, description) -> Void in
             logged_in = success
 
-            _saveLoggedInStatus(loggedIn: logged_in)
+            self._saveLoggedInStatus(loggedIn: logged_in)
             
             self.runStatementForTargetObservers(observerGroupName: FConstant.String.FStatus.loginStatus) { (observer) -> Void in
                 if let observer = observer as? FStatus_LoginObserver {

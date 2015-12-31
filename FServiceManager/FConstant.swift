@@ -9,27 +9,27 @@
 import Foundation
 
 public struct FConstant {
-    struct Notification {
+    public struct Notification {
         // FStatus
-        struct FStatus {
-            static let addObserver = "FStatus_AddObserver"
-            static let removeObserver = "FStatus_RemoveObserver"
+        public struct FStatus {
+            public static let addObserver = "FStatus_AddObserver"
+            public static let removeObserver = "FStatus_RemoveObserver"
 
-            static let didLogin = "FStatus_DidLogin"
-            static let didLogout = "FStatus_DidLogout"
+            public static let didLogin = "FStatus_DidLogin"
+            public static let didLogout = "FStatus_DidLogout"
         }
     }
     
-    struct UserDefaults {
+    public struct UserDefaults {
         //FStatus
-        struct FStatus {
-            static let logged_in = "logged_in"
+        public struct FStatus {
+            public static let logged_in = "logged_in"
         }
     }
     
-    struct String {
-        struct FStatus {
-            static let loginStatus = "_loginStatus"
+    public struct String {
+        public struct FStatus {
+            public static let loginStatus = "_loginStatus"
         }
     }
 }
