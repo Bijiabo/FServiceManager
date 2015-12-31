@@ -26,13 +26,20 @@ public class FStatus: NSObject {
     // MARK: - add observers
     
     private func _addObservers () {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("addObserver:"), name: FConstant.Notification.FStatus.addObserver, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("removeObserver:"), name: FConstant.Notification.FStatus.removeObserver, object: nil)
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter.addObserver(self, selector: Selector("addObserver:"), name: FConstant.Notification.FStatus.addObserver, object: nil)
+        notificationCenter.addObserver(self, selector: Selector("removeObserver:"), name: FConstant.Notification.FStatus.removeObserver, object: nil)
+
+        notificationCenter.addObserver(self, selector: Selector("didLogin:"), name: FConstant.Notification.FStatus.didLogin, object: nil)
+        notificationCenter.addObserver(self, selector: Selector("didLogout:"), name: FConstant.Notification.FStatus.didLogout, object: nil)
     }
     
     private func _removeObservers () {
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: FConstant.Notification.FStatus.addObserver, object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: FConstant.Notification.FStatus.removeObserver, object: nil)
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter.removeObserver(self, name: FConstant.Notification.FStatus.addObserver, object: nil)
+        notificationCenter.removeObserver(self, name: FConstant.Notification.FStatus.removeObserver, object: nil)
+        notificationCenter.removeObserver(self, name: FConstant.Notification.FStatus.didLogin, object: nil)
+        notificationCenter.removeObserver(self, name: FConstant.Notification.FStatus.didLogout, object: nil)
     }
     
     func addObserver (notification: NSNotification) {
@@ -58,6 +65,14 @@ public class FStatus: NSObject {
                 return
             }
         }
+    }
+
+    func didLogin(notification: NSNotification) {
+        _saveLoggedInStatus(loggedIn: true)
+    }
+
+    func didLogout(notification: NSNotification) {
+        _saveLoggedInStatus(loggedIn: false)
     }
     
     private func _convertNotificationObject(notificationObject notificationObject: AnyObject?) -> (name: String, observer: FStatusObserver)? {
@@ -97,11 +112,13 @@ public class FStatus: NSObject {
     
     // MARK: - login status
     private func _setupLoginStatus () {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.setBool(false, forKey: FConstant.UserDefaults.FStatus.logged_in)
-        userDefaults.synchronize()
-        
         _checkLoginStatus()
+    }
+
+    private func _saveLoggedInStatus (loggedIn loggedIn: Bool) {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setBool(loggedIn, forKey: FConstant.UserDefaults.FStatus.logged_in)
+        userDefaults.synchronize()
     }
     
     private func _checkLoginStatus () {
@@ -110,10 +127,8 @@ public class FStatus: NSObject {
         
         FAction.checkLogin { (success, description) -> Void in
             logged_in = success
-            
-            let userDefaults = NSUserDefaults.standardUserDefaults()
-            userDefaults.setBool(logged_in, forKey: FConstant.UserDefaults.FStatus.logged_in)
-            userDefaults.synchronize()
+
+            _saveLoggedInStatus(loggedIn: logged_in)
             
             self.runStatementForTargetObservers(observerGroupName: FConstant.String.FStatus.loginStatus) { (observer) -> Void in
                 if let observer = observer as? FStatus_LoginObserver {

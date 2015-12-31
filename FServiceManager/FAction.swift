@@ -60,11 +60,7 @@ public class FAction: NSObject {
             var description: String = error.debugDescription
             if error == nil {
                 success = json["success"].boolValue
-                if !success {
-                    description = json["description"].stringValue
-                } else {
-                    description = json["description"].stringValue
-                }
+                description = json["description"].stringValue
                 
                 FHelper.current_user = User(id: json["user"]["id"].intValue , name: json["user"]["name"].stringValue, email: json["user"]["email"].stringValue, valid: true)
             }
@@ -90,6 +86,8 @@ public class FAction: NSObject {
                 success = !json["error"].boolValue
                 if !success {
                     description = json["description"].stringValue
+                } else {
+                    NSNotificationCenter.defaultCenter().postNotificationName(FConstant.Notification.FStatus.didLogin, object: nil)
                 }
                 
                 //save token
@@ -131,7 +129,10 @@ public class FAction: NSObject {
     
     public class func logout () {
         FNetManager.sharedInstance.DELETE(path: "tokens/\(FHelper.tokenID).json?token=\(FHelper.token)") { (request, response, json, error) -> Void in
-            print(json)
+            if error == nil {
+                NSNotificationCenter.defaultCenter().postNotificationName(FConstant.Notification.FStatus.didLogout, object: nil)
+                FHelper.clearToken()
+            }
         }
     }
     
@@ -193,44 +194,4 @@ public class FAction: NSObject {
         }
     }
     
-    // MARK: - cats
-    public class cats {
-        // get users own cats
-        public class func mine (completeHandler: (request: NSURLRequest, response:  NSHTTPURLResponse?, json: JSON, error: ErrorType?)->Void) {
-            
-            FNetManager.sharedInstance.GET(path: "users/\(FHelper.current_user.id)/cats.json") { (request, response, json, error) -> Void in
-                completeHandler(request: request, response: response, json: json, error: error)
-            }
-        }
-        
-        // create
-        public class func create (name: String, age: Int, breed: String, completeHandler: (success: Bool, description: String)->Void ) {
-            let parameters: [String : AnyObject] = [
-                "cat": [
-                    "name": name,
-                    "age": age,
-                    "breed": breed,
-                    "user_id": FHelper.current_user.id
-                ],
-                "token": FHelper.token
-            ]
-            
-            FNetManager.sharedInstance.POST(path: "cats.json", parameters: parameters) { (request, response, json, error) -> Void in
-                var success: Bool = false
-                var description: String = error.debugDescription
-                
-                if error == nil {
-                    success = !json["error"].boolValue
-                    if !success {
-                        description = json["description"].stringValue
-                    }
-                }
-                
-                completeHandler(success: success, description: description)
-            }
-        }
-        
-        
-        
-    }
 }

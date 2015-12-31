@@ -10,10 +10,13 @@ import Foundation
 
 public struct FConstant {
     struct Notification {
-        //FStatus
+        // FStatus
         struct FStatus {
             static let addObserver = "FStatus_AddObserver"
             static let removeObserver = "FStatus_RemoveObserver"
+
+            static let didLogin = "FStatus_DidLogin"
+            static let didLogout = "FStatus_DidLogout"
         }
     }
     
