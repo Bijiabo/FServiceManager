@@ -426,6 +426,7 @@
 				PRODUCT_NAME = FServiceManager;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -451,6 +452,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bijiabo.FServiceManager;
 				PRODUCT_NAME = FServiceManager;
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};
