@@ -193,7 +193,6 @@
 				6573801C1C29506200B3524F /* Frameworks */,
 				6573801D1C29506200B3524F /* Headers */,
 				6573801E1C29506200B3524F /* Resources */,
-				65D54D171C3032AB00F7B450 /* Run Script for Carthage */,
 			);
 			buildRules = (
 			);
@@ -274,26 +273,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		65D54D171C3032AB00F7B450 /* Run Script for Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
-			);
-			name = "Run Script for Carthage";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6573801B1C29506200B3524F /* Sources */ = {
