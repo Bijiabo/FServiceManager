@@ -406,7 +406,6 @@
 		657380351C29506300B3524F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BITCODE_GENERATION_MODE = bitcode;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -432,7 +431,6 @@
 		657380361C29506300B3524F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BITCODE_GENERATION_MODE = bitcode;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
